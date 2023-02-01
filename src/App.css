@@ -1,0 +1,36 @@
+html,
+body {
+  font-family: "Josefin Sans", sans-serif;
+  
+  font-weight: normal;
+  font-style: normal;
+  font-size: 11px; /* для iphone 5s */
+
+}
+/* Экстрамалые девайсы («телефоны», < 576px) */
+@media (max-width: 575.98px) { body { font-size: 10px !important; } }
+
+/* // Малые девайсы («ландшафтные», < 768px) */
+@media (max-width: 767.98px) { body { font-size: 10px; } }
+
+/* // Средние девайсы («таблетки», < 992px)  */
+@media (max-width: 991.98px) { body { font-size: 10px; } }
+
+/* // Большие девайсы (большие десктопы, < 1200px) */
+@media (max-width: 1199.98px) { body { font-size: 10px; } }
+
+body,
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #bbddee;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+

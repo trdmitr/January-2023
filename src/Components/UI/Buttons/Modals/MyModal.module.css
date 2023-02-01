@@ -1,0 +1,41 @@
+.myModal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: none;
+    background: rgba(0,0,0, 0.5);
+    z-index: 101;
+}
+
+.myModalContent {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: large;
+    text-align: center;
+    padding: 25px;
+    color: var(--colorText);
+    border-radius: 16px;
+    min-width: 250px;
+    box-shadow: inset 19px -19px 38px #4d65ab75, inset -19px 19px 38px #94a5af;
+background-color: #E7EDEE;
+  background-image: var(--allBackroundImage);
+
+}
+
+.myModal.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.myModalContent:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    border: 1px dashed salmon;
+    border-radius: 5px;
+    }
