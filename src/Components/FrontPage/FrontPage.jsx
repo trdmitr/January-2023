@@ -25,7 +25,7 @@ return (
                     {/* <img src={imUrl} width={80} alt="Каверы Подземки" /> */}
                 </div>
                 <div className={classes.front_body}>
-                    <span>Трибьют, посвященный музыкантам родившимся в январе </span>
+                    <span>Трибьют, посвященный музыкантам, родившимся в январе </span>
                 </div>
       </div>
     </div>
