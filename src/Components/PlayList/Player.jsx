@@ -4,11 +4,15 @@ import classes from './PlayList.module.css'
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
 import LoaderStrick from '../UI/Loader/LoaderStrick';
-const Player = ({songs, songError}) => {
+import { useContext } from 'react';
+import { Context } from '../context';
+const Player = ({ songError}) => {
     const [trackIndex, setTrackIndex] = useState(0);
     // const [test, setTest] = useState(0)
     // const testsong = setTest({...songs, nameTest: name})
     // console.log("NAME", testsong)
+    const songs = useContext(Context);
+    console.log("ContextValue", songs)
     const audiosongs1 = songs.map((song) => {
         const container = {};
          container.name = song.name;
@@ -33,7 +37,6 @@ const Player = ({songs, songError}) => {
          container.aud_name = song.audio_name3;
         return container;
     }
-    
     ) 
     const audiosongs4 = songs.map((song) => {
         const container = {};
@@ -42,26 +45,46 @@ const Player = ({songs, songError}) => {
          container.aud_name = song.video_name1;
         return container;
     }
-    )
-    //   const mapTrack = (fields) => songs.map(u1 => fields.reduce((u2, f1) => {
-    //     u2[f1] = u1[f1];
-    //     return u2;
-    // }, {}));
+    ) 
+    const audiosongs5 = songs.map((song) => {
+      const container = {};
+       container.name = song.name;
+       container.src = song.video2;
+       container.aud_name = song.video_name2;
+      return container;
+  }
+  ) 
+  const audiosongs6 = songs.map((song) => {
+    const container = {};
+     container.name = song.name;
+     container.src = song.video3;
+     container.aud_name = song.video_name3;
+    return container;
+}
+) 
+    
+  // const mapTrack = (fields) => songs.map(u1 => fields.reduce((u2, f1) => {
+  //   u2[f1] = u1[f1];
+  //   return u2;
+  // }, {}));
 
-    // const aud1 = mapTrack(["name", "audio1"].filter(e => e.audio1 !== ""));
-    // const aud2 = mapTrack(["name", "audio2"].filter(e => e.audio2 !== ''));
-    // const aud3 = mapTrack(["name", "audio3"].filter(e => e.audio3 !== ''));
-    //  console.log ("aud1", aud1)
+  // const audiosongs1 = mapTrack(["name", "audio1"]);
+  // const audiosongs2 = mapTrack(["name", "audio2"]);
+  // const audiosongs3 = mapTrack(["name", "audio3"]);
+  // const audiosongs4 = mapTrack(["name", "video3"]);
+  // const audiosongs5 = mapTrack(["name", "video3"]);
+  // const audiosongs6 = mapTrack(["name", "video3"]);
+    
 
 
-    const audioList =  [...audiosongs1, ...audiosongs2, ...audiosongs3, ...audiosongs4]
+    const audioList =  [...audiosongs1, ...audiosongs2, ...audiosongs3, ...audiosongs4, ...audiosongs5, ...audiosongs6]
  .filter(e => e.src !== '');
   if (audioList.length === 0) {
         return <LoaderStrick/>
       }
       if (songError) 
 return <h1 >Ошибка загрузки!{songError}</h1>
-
+console.log(audioList)
     const handleClickPrevious = () => {
         setTrackIndex((currentTrack) =>
           currentTrack === 0 ? audioList.length - 1 : currentTrack - 1
