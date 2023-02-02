@@ -55,11 +55,10 @@ id= {classes.videoFrame} url = {currSing.video1} id= {classes.videoFrame}  /> */
           {/* <ReactPlayer className={currSing.video3 ? '': classes.mediaHidden} id={classes.videoFrame} url = {currSing.video3} controls={true} /> */}
           {/* <video className={currSing.video3 ? '': classes.mediaHidden} src={currSing.video3} id = {classes.videoFrame} controls={true} ></video> */}
           <video className={currSing.video3 ? '' : classes.mediaHidden} src={currSing.video3} id={classes.videoFrame} controls={true} type="video/mp4" ></video>
-
         </div>
         <div className={classes.tziTata}>
-          {/* <img className={classes.tziImage} src={currSing.picture_tzitata} width={80} alt="Цитаты" /> */}
-          <p>{currSing.picture}</p>
+            {/* <img className={classes.tziImage} src={currSing.picture_tzitata} width={80} alt="Цитаты" /> */}
+            <p>{currSing.picture}</p>
         </div>
       </div>
       

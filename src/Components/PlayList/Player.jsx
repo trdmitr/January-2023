@@ -43,15 +43,15 @@ const Player = ({songs, songError}) => {
         return container;
     }
     )
-      const mapTrack = (fields) => songs.map(u1 => fields.reduce((u2, f1) => {
-        u2[f1] = u1[f1];
-        return u2;
-    }, {}));
+    //   const mapTrack = (fields) => songs.map(u1 => fields.reduce((u2, f1) => {
+    //     u2[f1] = u1[f1];
+    //     return u2;
+    // }, {}));
 
-    const aud1 = mapTrack(["name", "audio1"].filter(e => e.audio1 !== ""));
-    const aud2 = mapTrack(["name", "audio2"].filter(e => e.audio2 !== ''));
-    const aud3 = mapTrack(["name", "audio3"].filter(e => e.audio3 !== ''));
-     console.log ("aud1", aud1)
+    // const aud1 = mapTrack(["name", "audio1"].filter(e => e.audio1 !== ""));
+    // const aud2 = mapTrack(["name", "audio2"].filter(e => e.audio2 !== ''));
+    // const aud3 = mapTrack(["name", "audio3"].filter(e => e.audio3 !== ''));
+    //  console.log ("aud1", aud1)
 
 
     const audioList =  [...audiosongs1, ...audiosongs2, ...audiosongs3, ...audiosongs4]
