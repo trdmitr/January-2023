@@ -2,7 +2,7 @@
   "name": "letov-56",
   "version": "0.1.0",
   "private": false,
-  "homepage": "",
+  "homepage": "https://trdmitr.github.io/January-2023/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
