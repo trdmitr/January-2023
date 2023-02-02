@@ -84,7 +84,7 @@ const Player = ({ songError}) => {
       }
       if (songError) 
 return <h1 >Ошибка загрузки!{songError}</h1>
-console.log(audioList)
+// console.log(audioList)
     const handleClickPrevious = () => {
         setTrackIndex((currentTrack) =>
           currentTrack === 0 ? audioList.length - 1 : currentTrack - 1
