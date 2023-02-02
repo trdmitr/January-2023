@@ -19,6 +19,7 @@ const SingleOne = ({ songs }) => {
   }, [songs])
   const listContent = useMemo(() => {
     return currSings.map((currSing) =>
+    <>
       <div className={classes.mediaSong} key={currSing.id}>
         <img className={classes.mediaImage} src={currSing.photo} width={80} alt={currSing.name} />
         <div className={classes.headerSong}>
@@ -56,12 +57,13 @@ id= {classes.videoFrame} url = {currSing.video1} id= {classes.videoFrame}  /> */
           {/* <video className={currSing.video3 ? '': classes.mediaHidden} src={currSing.video3} id = {classes.videoFrame} controls={true} ></video> */}
           <video className={currSing.video3 ? '' : classes.mediaHidden} src={currSing.video3} id={classes.videoFrame} controls={true} type="video/mp4" ></video>
         </div>
-        <div className={classes.tziTata}>
+          <div className={classes.tziTata}>
             {/* <img className={classes.tziImage} src={currSing.picture_tzitata} width={80} alt="Цитаты" /> */}
             <p>{currSing.picture}</p>
         </div>
       </div>
-      
+       
+       </>
     );
 
   }, [currSings])
