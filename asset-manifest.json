@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.96841a62.css",
-    "main.js": "/static/js/main.676a1363.js",
-    "static/js/787.db786a6c.chunk.js": "/static/js/787.db786a6c.chunk.js",
-    "static/media/Calligraph-Medium.woff": "/static/media/Calligraph-Medium.37d95a1a29bc7f80c78f.woff",
-    "static/media/Calligraph-Medium.woff2": "/static/media/Calligraph-Medium.63dd99a9cdba3101b048.woff2",
-    "index.html": "/index.html",
-    "main.96841a62.css.map": "/static/css/main.96841a62.css.map",
-    "main.676a1363.js.map": "/static/js/main.676a1363.js.map",
-    "787.db786a6c.chunk.js.map": "/static/js/787.db786a6c.chunk.js.map"
+    "main.css": "/January-2023/static/css/main.6901ff50.css",
+    "main.js": "/January-2023/static/js/main.2028b136.js",
+    "static/js/787.db786a6c.chunk.js": "/January-2023/static/js/787.db786a6c.chunk.js",
+    "static/media/Calligraph-Medium.woff": "/January-2023/static/media/Calligraph-Medium.37d95a1a29bc7f80c78f.woff",
+    "static/media/Calligraph-Medium.woff2": "/January-2023/static/media/Calligraph-Medium.63dd99a9cdba3101b048.woff2",
+    "index.html": "/January-2023/index.html",
+    "main.6901ff50.css.map": "/January-2023/static/css/main.6901ff50.css.map",
+    "main.2028b136.js.map": "/January-2023/static/js/main.2028b136.js.map",
+    "787.db786a6c.chunk.js.map": "/January-2023/static/js/787.db786a6c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.96841a62.css",
-    "static/js/main.676a1363.js"
+    "static/css/main.6901ff50.css",
+    "static/js/main.2028b136.js"
   ]
 }
