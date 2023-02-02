@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, {useContext, useMemo } from 'react';
 import { useParams } from "react-router";
 import classes from './SingleOne.module.css'
 import { useNavigate } from 'react-router-dom'
@@ -6,12 +6,11 @@ import cl from '../UI/Pub.module.css'
 import CaverButton from '../UI/Buttons/CaverButton'
 import IconButtonHome from '../UI/Buttons/IconButtonHome'
 import BackButton from '../UI/Buttons/MyButton';
-
-const SingleOne = ({ songs }) => {
+import { Context } from '../context';
+const SingleOne = () => {
   const navigate = useNavigate();
   const params = useParams();
-
-
+  const songs = useContext(Context);
   const currSings = useMemo(() => {
     // eslint-disable-next-line
     return songs.filter(songs => songs.id === params.id);

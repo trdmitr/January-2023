@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import React, { useContext, useMemo, useState } from 'react'
 import classes from './CaverPage.module.css'
 import { useNavigate } from 'react-router-dom'
 import cl from '../UI/Pub.module.css'
@@ -9,10 +9,12 @@ import Modal from '../UI/Buttons/Modals/Modals'
 import About from '../About'
 import Img from '../Img'
 import Player from '../PlayList/Player'
+import { Context } from '../context';
 
-const CaverPage = ({songs, songError}) => {
+const CaverPage = ({ songError}) => {
     const navigate = useNavigate();
     const [modal, setModal] = useState(false);
+    const songs = useContext(Context);
     const singContent = useMemo(() => {
         return songs.map((caver) => (
             // eslint-disable-next-line

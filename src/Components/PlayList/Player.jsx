@@ -12,7 +12,7 @@ const Player = ({ songError}) => {
     // const testsong = setTest({...songs, nameTest: name})
     // console.log("NAME", testsong)
     const songs = useContext(Context);
-    console.log("ContextValue", songs)
+    // console.log("ContextValue", songs)
     const audiosongs1 = songs.map((song) => {
         const container = {};
          container.name = song.name;
@@ -71,8 +71,8 @@ const Player = ({ songError}) => {
   // const audiosongs1 = mapTrack(["name", "audio1"]);
   // const audiosongs2 = mapTrack(["name", "audio2"]);
   // const audiosongs3 = mapTrack(["name", "audio3"]);
-  // const audiosongs4 = mapTrack(["name", "video3"]);
-  // const audiosongs5 = mapTrack(["name", "video3"]);
+  // const audiosongs4 = mapTrack(["name", "video1"]);
+  // const audiosongs5 = mapTrack(["name", "video2]);
   // const audiosongs6 = mapTrack(["name", "video3"]);
     
 

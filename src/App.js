@@ -36,22 +36,19 @@ useEffect (() => {
     const tributes = Array.from(data);
     const value = tributes;
        return (
-       <Fragment>
-        <Context.Provider value={value}>
-        <HashRouter>
-           <Routes>
-          <Route exact path="/" element={<FrontPage />} />
-          <Route path="/cavers" element={<CaverPage songs = {tributes} songError = {songError}/>} />
-          {/* <Route path="/cavers" element={<Cavers isSongsLoading = {isSongsLoading} songs = {songs}/>} /> */}
-          
-          <Route path='/cavers/:id' element={<SingleOne songs = {tributes} />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-        </HashRouter>
-      </Context.Provider>
-    </Fragment>
-     
-   
+         <Fragment>
+           <Context.Provider value={value}>
+             <HashRouter>
+               <Routes>
+                 <Route exact path="/" element={<FrontPage />} />
+                 <Route path="/cavers" element={<CaverPage songError={songError} />} />
+                 {/* <Route path="/cavers" element={<Cavers isSongsLoading = {isSongsLoading} songs = {songs}/>} /> */}
+                 <Route path='/cavers/:id' element={<SingleOne />} />
+                 <Route path="*" element={<NotFound />} />
+               </Routes>
+             </HashRouter>
+           </Context.Provider>
+         </Fragment>
   );
 }
 
