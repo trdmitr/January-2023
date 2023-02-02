@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { useState} from "react";
 import classes from './PlayList.module.css'
 import AudioPlayer from "react-h5-audio-player";
@@ -77,8 +77,11 @@ const Player = ({ songError}) => {
     
 
 
-    const audioList =  [...audiosongs1, ...audiosongs2, ...audiosongs3, ...audiosongs4, ...audiosongs5, ...audiosongs6]
+    const audioList = useMemo(() => { 
+      return  [...audiosongs1, ...audiosongs2, ...audiosongs3, ...audiosongs4, ...audiosongs5, ...audiosongs6]
  .filter(e => e.src !== '');
+}, [songs])
+
   if (audioList.length === 0) {
         return <LoaderStrick/>
       }
